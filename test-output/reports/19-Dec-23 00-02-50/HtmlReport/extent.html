@@ -1,0 +1,1296 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Orangehrmlive Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Dec 19, 2023 12:02:50 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Dec 19, 2023 12:02:50 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Dec 19, 2023 12:04:41 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>2</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='8%'><b>1</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='91%'><b>11</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='8%'><b>8</b> steps passed</small></div>
+<div>
+<small data-tooltip='11%'><b>11</b> steps failed,
+<b>81</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"orangehrm login page":53.521,"OrangeHrmLive demo":55.1
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@regression</td>
+<td>1</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>8.333%</td>
+</tr>
+<tr>
+<td>@author_BP</td>
+<td>1</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>16.667%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Engineer</td>
+<td>Jay Vaghani</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Orangehrm</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 1,
+failChild: 11,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 8,
+failGrandChild: 11,
+warningGrandChild: 0,
+skipGrandChild: 81,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@regression</a><a class="dropdown-item" href="#">@author_BP</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">orangehrm login page</p>
+            <p class="text-sm">
+              <span>00:02:53</span> / <span>00:00:53:521</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">orangehrm login page</h5>
+<span class='badge badge-success'>12.19.2023 00:02:53</span>
+<span class='badge badge-danger'>12.19.2023 00:03:46</span>
+<span class='badge badge-default'>00:00:53:521</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user, I would like to login successfully</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Verify That The Logo Display On HomePage</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomePage()">
+                <span>Given I am on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.loginToTheApplication()">
+                <span>When Login To The application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.orangehrmlive.demo.steps.LoginSteps.verifyLogoIsDisplayed()">
+                <span>Then Verify Logo is Displayed</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.ClassCastException: class jdk.proxy2.$Proxy29 cannot be cast to class org.openqa.selenium.By (jdk.proxy2.$Proxy29 is in module jdk.proxy2 of loader 'app'; org.openqa.selenium.By is in unnamed module of loader 'app')
+	at com.orangehrmlive.demo.pages.HomePage.hrmLogo(HomePage.java:34)
+	at com.orangehrmlive.demo.steps.LoginSteps.verifyLogoIsDisplayed(LoginSteps.java:45)
+	at ✽.Verify Logo is Displayed(file:///C:/IdeaProject/orange-hrm-sw-6/src/test/resources/features/logintest.feature:17)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.orangehrmlive.demo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Verify That The Logo Display On HomePage
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded1.jpg' src="../screenshots/embedded1.jpg">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Verify User Should LogOut SuccessFully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.iAmOnHomePage()">
+                <span>Given I am on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.loginToTheApplication()">
+                <span>When Login To The application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.clickOnUserProfileLogo()">
+                <span>Then Click on User Profile logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.mouseHoverOnAndClick(java.lang.String)">
+                <span>And Mouse hover on "Logout" and click</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.orangehrmlive.demo.steps.LoginSteps.verifyTheTextIsDisplayed(java.lang.String)">
+                <span>And Verify the text "Login Panel" is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="16"><span class="badge log fail-bg mr-2">Fail</span>Verify Error Message With InvalidCredentials</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="17"><span class="badge log fail-bg mr-2">Fail</span>Verify Error Message With InvalidCredentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Enter username ""</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Enter password ""</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on Login Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify Error message "Required"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="25"><span class="badge log fail-bg mr-2">Fail</span>Verify Error Message With InvalidCredentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Enter username "test123@gmail.com"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Enter password ""</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on Login Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify Error message "Required"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="33"><span class="badge log fail-bg mr-2">Fail</span>Verify Error Message With InvalidCredentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Enter username ""</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Enter password "test123"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on Login Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify Error message "Required"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="41"><span class="badge log fail-bg mr-2">Fail</span>Verify Error Message With InvalidCredentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Enter username "test123@gmail.com"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Enter password "test123"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on Login Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify Error message "Invalid credentials"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="49"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">OrangeHrmLive demo</p>
+            <p class="text-sm">
+              <span>00:03:46</span> / <span>00:00:55:100</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">OrangeHrmLive demo</h5>
+<span class='badge badge-success'>12.19.2023 00:03:46</span>
+<span class='badge badge-danger'>12.19.2023 00:04:41</span>
+<span class='badge badge-default'>00:00:55:100</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=49</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user, i should login successfully</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="50"><span class="badge log fail-bg mr-2">Fail</span>Search The User Create And Verify It</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.loginToApplication()">
+                <span>When Login to Application</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnTab(java.lang.String)">
+                <span>Then click On "Admin" Tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.verifyText(java.lang.String)">
+                <span>And Verify "System Users" Text</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And Enter Username</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.selectUserRole()">
+                <span>And Select User Role</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.selectSatatus()">
+                <span>And Select Satatus</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnTag(java.lang.String)">
+                <span>And Click on "Search" Tag</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.verifyTheUserShouldBeInResultList()">
+                <span>And Verify the User should be in Result list.</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="62"><span class="badge log fail-bg mr-2">Fail</span>Verify That Admin Should Delete The User SuccessFully</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.loginToApplication()">
+                <span>When Login to Application</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnTab(java.lang.String)">
+                <span>Then click On "Admin" Tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.verifyText(java.lang.String)">
+                <span>And Verify "System Users" Text</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And Enter Username</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.selectUserRole()">
+                <span>And Select User Role</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.selectSatatus()">
+                <span>And Select Satatus</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnTag(java.lang.String)">
+                <span>And Click on "Search" Tag</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.verifyTheUserShouldBeInResultList()">
+                <span>And Verify the User should be in Result list.</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnCheckBox()">
+                <span>And Click on Check box</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnDeleteButton()">
+                <span>And Click on Delete Button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.popupWillDisplay()">
+                <span>And Popup will display</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.clickOnOkButtonOnPopup()">
+                <span>And Click on Ok Button on Popup</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.orangehrmlive.demo.steps.UserSteps.verifyMessage(java.lang.String)">
+                <span>And verify message "Successfully Deleted"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="79"><span class="badge log fail-bg mr-2">Fail</span>Search The User And Verify The Message RecordFound</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="80"><span class="badge log fail-bg mr-2">Fail</span>Search The User And Verify The Message RecordFound</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Login to Application</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then click On "Admin" Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify "System Users" Text</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Enter Username "<username >"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Select User Role "Admin"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Enter EmployeeName "Paul Collings"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Select Satatus "Enable"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on "Search" Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And verify message "(1) Record Found"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify username Admin</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on Reset Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="95"><span class="badge log fail-bg mr-2">Fail</span>Search The User And Verify The Message RecordFound</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Login to Application</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then click On "Admin" Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify "System Users" Text</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Enter Username "<username >"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Select User Role "ESS"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Enter EmployeeName "Cassidy Hope"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Select Satatus "Enable"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on "Search" Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And verify message "(1) Record Found"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify username Cassidy.Hope</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on Reset Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="110"><span class="badge log fail-bg mr-2">Fail</span>Search The User And Verify The Message RecordFound</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Login to Application</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then click On "Admin" Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify "System Users" Text</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Enter Username "<username >"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Select User Role "ESS"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Enter EmployeeName "Nina Patel"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Select Satatus "Enable"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on "Search" Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And verify message "(1) Record Found"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify username Nina.Patel</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on Reset Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="125"><span class="badge log fail-bg mr-2">Fail</span>Search The User And Verify The Message RecordFound</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given I am on Homepage</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Login to Application</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then click On "Admin" Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify "System Users" Text</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Enter Username "<username >"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Select User Role "Admin"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Enter EmployeeName "Odis Adalwin"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Select Satatus "Enable"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on "Search" Button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And verify message "(1) Record Found"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Verify username Odis.Adalwin</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And Click on Reset Tab</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>11</span>
+</span>
+<p class="name">@regression</p>
+<p class="duration text-sm">12 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@regression</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>11 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:02:53 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify That The Logo Display On HomePage</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify That The Logo Display On HomePage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:03:11 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Verify User Should LogOut SuccessFully</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify User Should LogOut SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:23 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>Verify Error Message With InvalidCredentials</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify Error Message With InvalidCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:28 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='25'>Verify Error Message With InvalidCredentials</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify Error Message With InvalidCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:34 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>Verify Error Message With InvalidCredentials</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify Error Message With InvalidCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:40 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='41'>Verify Error Message With InvalidCredentials</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify Error Message With InvalidCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:46 am</td>
+<td>
+<a href="#" class="linked" test-id='49' id='50'>Search The User Create And Verify It</a>
+<div class="">
+<span class="badge badge-default">OrangeHrmLive demo.Search The User Create And Verify It</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:53 am</td>
+<td>
+<a href="#" class="linked" test-id='49' id='62'>Verify That Admin Should Delete The User SuccessFully</a>
+<div class="">
+<span class="badge badge-default">OrangeHrmLive demo.Verify That Admin Should Delete The User SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:04:00 am</td>
+<td>
+<a href="#" class="linked" test-id='49' id='80'>Search The User And Verify The Message RecordFound</a>
+<div class="">
+<span class="badge badge-default">OrangeHrmLive demo.Search The User And Verify The Message RecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:04:15 am</td>
+<td>
+<a href="#" class="linked" test-id='49' id='95'>Search The User And Verify The Message RecordFound</a>
+<div class="">
+<span class="badge badge-default">OrangeHrmLive demo.Search The User And Verify The Message RecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:04:22 am</td>
+<td>
+<a href="#" class="linked" test-id='49' id='110'>Search The User And Verify The Message RecordFound</a>
+<div class="">
+<span class="badge badge-default">OrangeHrmLive demo.Search The User And Verify The Message RecordFound</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:04:36 am</td>
+<td>
+<a href="#" class="linked" test-id='49' id='125'>Search The User And Verify The Message RecordFound</a>
+<div class="">
+<span class="badge badge-default">OrangeHrmLive demo.Search The User And Verify The Message RecordFound</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>5</span>
+</span>
+<p class="name">@author_BP</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@author_BP</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>5 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:02:53 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify That The Logo Display On HomePage</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify That The Logo Display On HomePage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>00:03:11 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Verify User Should LogOut SuccessFully</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify User Should LogOut SuccessFully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:23 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>Verify Error Message With InvalidCredentials</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify Error Message With InvalidCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:28 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='25'>Verify Error Message With InvalidCredentials</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify Error Message With InvalidCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:34 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>Verify Error Message With InvalidCredentials</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify Error Message With InvalidCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:40 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='41'>Verify Error Message With InvalidCredentials</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify Error Message With InvalidCredentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.ClassCastException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.ClassCastException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:03:05 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Then Verify Logo is Displayed</a>
+<div class="">
+<span class="badge badge-default">orangehrm login page.Verify That The Logo Display On HomePage.Then Verify Logo is Displayed</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
